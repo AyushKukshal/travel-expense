@@ -1,0 +1,217 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark background for dark theme */
+    color: #f1f1f1; /* Light text color */
+    line-height: 1.6;
+    padding: 20px 10px;
+}
+
+.container {
+    max-width: 600px; /* Smaller container width for mobile users */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c084fc; /* Aesthetic purple color */
+}
+
+/* Card Styles */
+.card {
+    background-color: #282828; /* Darker background for cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #eaeaea; /* Light text color for card titles */
+}
+
+/* Input and Buttons */
+input[type="date"] {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Day Type Button Styles */
+.day-type-buttons {
+    display: flex;
+    gap: 15px; /* Adding gap between the buttons */
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+.day-type-btn {
+    background-color: #9b4dca; /* Purple background color */
+    color: white;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease-in-out, box-shadow 0.2s;
+    width: 45%; /* Buttons will take 45% width to maintain proportion */
+}
+
+.day-type-btn:hover {
+    background-color: #7a32b1; /* Darker purple when hovered */
+}
+
+.day-type-btn:active {
+    background-color: #5f2780; /* Even darker purple when clicked */
+    transform: translateY(2px); /* Button seems pressed down */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow when button is pressed */
+}
+
+.day-type-btn:last-child {
+    margin-right: 0;
+}
+
+/* Add Expense Button Styles */
+.submit-btn {
+    background-color: #9b4dca; /* Same purple as day-type buttons */
+    color: white;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease-in-out, box-shadow 0.2s;
+    margin-top: 20px; /* Add margin to create space below the day-type buttons */
+    width: 50%; /* Make the "Add Expense" button the same width as the day-type buttons */
+    margin-left: auto;
+    margin-right: auto; /* Center the button horizontally */
+    display: block;
+}
+
+.submit-btn:hover {
+    background-color: #7a32b1; /* Darker purple when hovered */
+}
+
+.submit-btn:active {
+    background-color: #5f2780; /* Even darker purple when clicked */
+    transform: translateY(2px); /* Button seems pressed down */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow when button is pressed */
+}
+
+/* Expense Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #555;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+table td {
+    background-color: #282828;
+}
+
+table tr:nth-child(even) td {
+    background-color: #333;
+}
+
+/* Total Amount Section */
+h5 {
+    font-size: 1.2rem;
+    text-align: right;
+    color: #c084fc;
+    margin-top: 20px;
+}
+
+/* Remove Button Styles */
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .day-type-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .submit-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    table th {
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+}
