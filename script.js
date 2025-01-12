@@ -50,6 +50,9 @@ window.onload = function () {
         `;
 
         updateTotal();
+
+        // Send expense to the backend
+        saveExpenseToBackend(date, dayType, amount);
     }
 
     // Remove expense from the table and update total
@@ -71,4 +74,29 @@ window.onload = function () {
 
         document.getElementById('totalAmount').innerText = total;
     }
+
+    // Save expense to the backend (you need to implement the backend API)
+    function saveExpenseToBackend(date, dayType, amount) {
+        const expenseData = {
+            date: date,
+            dayType: dayType,
+            amount: amount
+        };
+
+        fetch('YOUR_BACKEND_URL/expenses', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(expenseData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Expense saved:', data);
+        })
+        .catch(error => {
+            console.error('Error saving expense:', error);
+        });
+    }
 };
+
